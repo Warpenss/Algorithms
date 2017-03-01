@@ -13,8 +13,8 @@ public class Main {
     }
 
     //List of implementation of different sorting algorithms:
-    //1. Insertion Sort
-    //
+    // 1. Insertion Sort
+    // Complexity: B Ω(n)	A Θ(n^2)	W O(n^2)	M O(1)
     // Pros:
     //  Efficient for sorting of small data
     //  Efficient for data that are almost sorted
