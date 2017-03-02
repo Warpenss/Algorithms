@@ -38,6 +38,12 @@ public class Main {
         return array;
     }
 
+    //Selection Sort
+    //Complexity: B Ω(n^2)	A Θ(n^2)	W O(n^2)	M O(1)
+    //Pros
+    // Easy to implement 
+    //Cons
+    //  Is no faster on a partially sorted array
     public static int[] selectionSort(int[] array){
 
         for (int i = 0; i < array.length - 1; i++) {
