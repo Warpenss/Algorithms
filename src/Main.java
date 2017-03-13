@@ -25,13 +25,12 @@ public class Main {
     // 1. Insertion Sort
     // Complexity: B Ω(n)	A Θ(n^2)	W O(n^2)	M O(1)    Stable
     // Pros:
-    //  Efficient for sorting of small data
-    //  Efficient for data that are almost sorted
-    //  In-place sorting as only constant amount of additional memory space is required
-    //  Stable sorting algorithm, since it does not change the relative order of elements with equal keys
-    //
+    //  +Efficient for sorting of small data
+    //  +Efficient for data that are almost sorted
+    //  +In-place sorting as only constant amount of additional memory space is required
+    //  +Stable sorting algorithm, since it does not change the relative order of elements with equal keys
     // Cons
-    //  Less efficient for sorting of large data
+    //  -Less efficient for sorting of large data
 
     public static int[] insertionSort(int[] array){
         int temp;
@@ -47,12 +46,12 @@ public class Main {
         return array;
     }
 
-    //2. Selection Sort
-    //Complexity: B Ω(n^2)	A Θ(n^2)	W O(n^2)	M O(1) Unstable
-    //Pros
-    // Easy to implement 
-    //Cons
-    //  Is no faster on a partially sorted array
+    // 2. Selection Sort
+    // Complexity: B Ω(n^2)	A Θ(n^2)	W O(n^2)	M O(1) Unstable
+    // Pros
+    //  +Easy to implement
+    // Cons
+    //  +Is no faster on a partially sorted array
 
     static int[] selectionSort( int[] array) {
 
@@ -72,11 +71,13 @@ public class Main {
 
     //3. Bubble Sort
     //Complexity: B Ω(n)	A Θ(n^2)	W O(n^2)	M O(1) Stable
-    //
-    //
-    //
-    //
-    //
+    // Pros:
+    //  +Efficient for sorting of small data
+    //  +Efficient for data that are almost sorted
+    //  +In-place sorting as only constant amount of additional memory space is required
+    //  +Stable sorting algorithm, since it does not change the relative order of elements with equal keys
+    // Cons
+    //  -Less efficient for sorting of large data
 
     static int[] bubbleSort(int[] array) {
         int i;
@@ -115,11 +116,12 @@ public class Main {
     }
 
 
-    //4. Quick Sort
-    //
-    //
-    //
-    //
+    // 4. Quick Sort
+    // Complexity: B Ω(n)	A Θ(n^2)	W O(n^2)	M O(1)    Stable
+    // Pros:
+    //  +Fastest in almost all situations
+    // Cons:
+    //  -As slow as bubble sort in the worst case
     //
 
     static int partition(int arr[], int left, int right)
