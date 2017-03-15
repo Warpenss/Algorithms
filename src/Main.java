@@ -1,24 +1,51 @@
 public class Main {
     public static void main(String[] args) {
-        int[] array = createArray(10);
-        mergeSort(array);
+        final int SIZE = 10;
+        int[] array = createArray(SIZE);
+        quick(array, 0, array.length - 1);
         for (int i : array)
             System.out.println(i);
     }
 
     //Method for creating an array
 
-    public static int[] createArray(int number) {
-        int[] array = new int[number];
-        for (int i = 0; i < number; i++)
-            array[i] = (int) (Math.random() * number);
+    private static int[] createArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++)
+            array[i] = (int) (Math.random() * size);
         return array;
     }
 
     //Custom sort
-    public static int[] sort(int[] array) {
 
-        return array;
+    private static void quick(int[] array, int left, int right) {
+        int index = part(array, left, right);
+        if (left < index - 1)
+            quick(array, left, index -1);
+        if (right > index)
+            quick(array, index, right);
+    }
+
+    private static int part(int[] array, int left, int right) {
+        int i = left;
+        int j = right;
+        int pivot = array[left + (right - left) / 2];
+
+        while (i <= j) {
+            while (array[i] < pivot)
+                i++;
+            while (array[j] > pivot)
+                j--;
+            if(i <= j) {
+                int temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+                i++;
+                j--;
+            }
+        }
+
+        return i;
     }
 
     //List of implementation of different sorting algorithms:
@@ -124,7 +151,7 @@ public class Main {
     //  -As slow as bubble sort in the worst case
     //
 
-    static int partition(int arr[], int left, int right)
+    private static int partition(int arr[], int left, int right)
     {
         int i = left, j = right;
         int tmp;
@@ -142,12 +169,12 @@ public class Main {
                 i++;
                 j--;
             }
-        };
+        }
 
         return i;
     }
 
-    static void quickSort(int arr[], int left, int right) {
+    private static void quickSort(int arr[], int left, int right) {
         int index = partition(arr, left, right);
         if (left < index - 1)
             quickSort(arr, left, index - 1);
@@ -166,7 +193,7 @@ public class Main {
     //  -Requires as much memory as the original array
     //
 
-    public static int[] mergeSort(int[] list) {
+    private static int[] mergeSort(int[] list) {
         if (list.length <= 1) {
             return list;
         }
