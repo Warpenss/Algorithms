@@ -117,7 +117,7 @@ public class Main {
 
 
     // 4. Quick Sort
-    // Complexity: B Ω(nlogn)	A Θ(nlogn)	W O(n^2)	M O(n)    Unstable
+    // Complexity: B Ω(nlogn)	A Θ(nlogn) W O(n^2) M O(n)  Unstable
     // Pros:
     //  +Fastest in almost all situations
     // Cons:
